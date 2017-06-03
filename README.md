@@ -7,12 +7,12 @@ hierarchię postów i zakładamy jeden wielki temat :D
 
 Komentarz powinien zawierać identyfikator, autora, kontent.
 
-Przykład jako JSON:
-{
-    "id":"1",
-    "author":"janusz",
-    "content":"Dobrze mówisz @wojtek23, stawiam browara"
-}
+Przykład jako JSON:  
+{  
+    "id":"1",  
+    "author":"janusz",  
+    "content":"Dobrze mówisz @wojtek23, stawiam browara"  
+}  
 
 Powinno być możliwe dodawanie i usuwanie postów, edytowanie pojedynczych
 postów, oraz pobieranie ich (zarówno pojedynczych, po identyfikatorze,
