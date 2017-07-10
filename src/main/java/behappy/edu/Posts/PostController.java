@@ -16,8 +16,7 @@ public class PostController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public @ResponseBody
-    Post addNewPost(@RequestBody Post toAdd) {
+    public Post addNewPost(@RequestBody Post toAdd) {
         Post newPost = new Post();
         newPost.setAuthor(toAdd.getAuthor());
         newPost.setContent(toAdd.getContent());
@@ -25,20 +24,17 @@ public class PostController {
     }
 
     @GetMapping(value = "/{id}")
-    public @ResponseBody
-    Post getPostById(@PathVariable Long id) {
+    public Post getPostById(@PathVariable Long id) {
         return postRepository.findOne(id);
     }
 
     @GetMapping()
-    public @ResponseBody
-    Iterable<Post> getAllPosts() {
+    public Iterable<Post> getAllPosts() {
         return postRepository.findAll();
     }
 
     @PutMapping(value ="/{id}")
-    public  @ResponseBody
-    Post changePost(@PathVariable Long id, @RequestBody Post changedPost){
+    public Post changePost(@PathVariable Long id, @RequestBody Post changedPost){
         Post oldPost = postRepository.findOne(id);
         oldPost.setContent(changedPost.getContent());
         return postRepository.save(oldPost);
@@ -46,8 +42,7 @@ public class PostController {
 
 
     @DeleteMapping(value = "/{id}")
-    public @ResponseBody
-    void deletePostById(@PathVariable Long id) {
+    public void deletePostById(@PathVariable Long id) {
         postRepository.delete(id);
     }
 }
