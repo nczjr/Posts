@@ -31,7 +31,6 @@ dependencies {
 		exclude group:'org.slf4j',module:'log4j-over-slf4j'
 		exclude group:'org.slf4j',module:'slf4j-api'
 		exclude group:'ch.qos.logback',module:'logback-classic'
-		exclude group:'org.springframework.boot',module:'spring-boot-starter-logging'
 
 	}
 	compile('org.springframework.boot:spring-boot-starter-web')
